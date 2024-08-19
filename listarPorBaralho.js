@@ -9,8 +9,8 @@ function listarPorBaralhos(){
       const flashcardBaralho = flashcards.filter(flashcard => flashcard.idBaralho === baralho.id)
       flashcardBaralho.forEach(flashcard => {
         console.log(`ID do flashcard: ${flashcard.id} Pergunta: ${flashcard.pergunta} Resposta: ${flashcard.resposta} id do Baralhos: ${flashcard.idBaralho}`)
-        console.log('')
       })
+      console.log('')
      })
    }
 }
