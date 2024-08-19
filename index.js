@@ -5,6 +5,10 @@ const atualizarBaralho = require('./Baralho/atualizarBaralho')
 const deletarBaralho = require('./Baralho/deletarBaralho')
 const criarFlashCard = require('./Flashcards/criarFlashCard')
 const listarFlashCards = require('./Flashcards/listarFlashCards')
+const atualizarFlashcards = require('./Flashcards/atualizarFlashCards')
+const excluirFlashCards = require('./Flashcards/excluirFlashCards')
+const buscarPergunta = require('./buscarPergunta')
+const buscarPorBaralho = require('./buscarPorBaralho')
 
 
 function menu(){
@@ -43,9 +47,21 @@ function menu(){
         case '6':
             atualizarBaralho(prompt, menu)
             break;
+        case '7':
+            atualizarFlashcards(prompt, menu)
+            break;
         case '8':
             deletarBaralho(prompt, menu)
-            break;    
+            break;
+        case '9':
+            excluirFlashCards(prompt, menu)
+            break;
+        case '10':
+            buscarPergunta(prompt, menu)
+            break;
+        case '11':
+            buscarPorBaralho(prompt, menu)
+            break;
         case '0':
             break;    
         default:
