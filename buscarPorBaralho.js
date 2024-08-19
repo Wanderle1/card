@@ -14,7 +14,10 @@ function buscarPorBaralho(prompt, callback){
             console.log('O baralho esta vazio')
             callback()
         }else{
-            console.log(flashcards[index])
+            const flashcardId = flashcards.filter(flashcard => flashcard.idBaralho === id)
+            flashcardId.forEach(flashcard => {
+                console.log(`ID do flashcard: ${flashcard.id} Pergunta: ${flashcard.pergunta} Resposta: ${flashcard.resposta} id do Baralhos: ${flashcard.idBaralho}`)
+            })
             callback()
         }
     }

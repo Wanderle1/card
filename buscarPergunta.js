@@ -7,7 +7,10 @@ function buscarPergunta(prompt, callback){
         console.log('Pergunta não encontrada')
         callback()
     }else{
-        console.log(flashcards[index])
+        const flashcardPergunta = flashcards.filter(flashcard => flashcard.pergunta === per)
+        flashcardPergunta.forEach(flashcard => {
+            console.log(`ID do flashcard: ${flashcard.id} Pergunta: ${flashcard.pergunta} Resposta: ${flashcard.resposta} id do Baralhos: ${flashcard.idBaralho}`)
+        })
         callback()
     }
 }
