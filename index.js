@@ -3,6 +3,7 @@ const criarBaralho = require('./Baralho/criarBaralho')
 const listarBaralhos = require('./Baralho/listarBaralhos')
 const atualizarBaralho = require('./Baralho/atualizarBaralho')
 const deletarBaralho = require('./Baralho/deletarBaralho')
+const listarPorBaralhos = require('./listarPorBaralho')
 const criarFlashCard = require('./Flashcards/criarFlashCard')
 const listarFlashCards = require('./Flashcards/listarFlashCards')
 const atualizarFlashcards = require('./Flashcards/atualizarFlashCards')
@@ -43,7 +44,12 @@ function menu(){
             break; 
         case '4':
             listarFlashCards()
-            menu()    
+            menu()
+            break;
+        case '5':
+            listarPorBaralhos()
+            menu()
+            break;        
         case '6':
             atualizarBaralho(prompt, menu)
             break;
